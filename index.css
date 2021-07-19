@@ -1,0 +1,97 @@
+
+.Form {
+  padding: 10px 20px;
+  border: 2px solid #d1d1d1;
+  border-radius: 15px;
+}
+
+.Form legend {
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-col input {
+  height: 25px;
+  background: transparent;
+  border: 2px solid #d1d1d1;
+  border-radius: 5px;
+}
+.form-col select {
+  height: 31px;
+  background: transparent;
+  border: 2px solid #d1d1d1;
+  border-radius: 5px;
+}
+
+/* ================================ */
+
+#tabs{
+  margin: 10px 5px;
+} 
+
+#tabs button{
+  margin: 0 10px 0 0;
+}
+
+.main {
+  display: flex;
+  border: 3px solid #d1d1d1;
+  border-radius: 15px;
+}
+
+.half-main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+.sub-main {
+  min-width: 200px;
+  border-radius: 5px;
+}
+
+#half-main-1 {
+  width: 300px;
+}
+#half-main-2 {
+  flex: 1;
+  align-items: center;
+}
+.ig {
+  width: 80px;
+  margin: 2px;
+}
+textarea {
+  width: 290px;
+  height: 65vh;
+}
+#form-output {
+  margin: 20px 0 0 0;
+}
+#form-title {
+  margin: 5px 0px;
+}
+
+#module{
+  display: none;
+}
+#code{
+  display: none;
+}
