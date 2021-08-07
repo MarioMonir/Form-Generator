@@ -1,8 +1,6 @@
 
 .Form {
   padding: 10px 20px;
-  border: 2px solid #d1d1d1;
-  border-radius: 15px;
 }
 
 .Form legend {
@@ -11,7 +9,7 @@
 
 .form-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -36,6 +34,11 @@
   background: transparent;
   border: 2px solid #d1d1d1;
   border-radius: 5px;
+}
+#submit-form{
+    margin: 15px;
+    border-radius:5px;
+    background: none;
 }
 
 /* ================================ */

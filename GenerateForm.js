@@ -5,7 +5,8 @@ let submit = document.getElementById("generate-form-submit");
 let formOutput = document.getElementById("form-output");
 let inputsArea = document.getElementById("inputs-area");
 let inputs = [
-  [{ name: "First Name", type: "text", value: "initial value" }],
+  [{ name: "First Name", type: "text", value: "initial value" },
+      {name:"Last Name", type:"text",value:"lastname intial value"}],
   [
     {
       name: "Gender",
@@ -27,6 +28,9 @@ let inputs = [
       ],
     },
   ],
+  [{name:"password", type:"password", value:"password"}],
+  [{name:"number", type:"number", value:"213"}],
+   
 ];
 let formTitle = "Form Title";
 let tabs = document.getElementById("tabs");
@@ -41,13 +45,14 @@ function changeTab(e, name) {
     document.getElementById("code").style.display = "none";
     document.getElementById("module").style.display = "block";
   } else if (name === "code") {
+    console.log("hello")
     document.getElementById("play").style.display = "none";
+    document.getElementById("module").style.display = "none";
     document.getElementById("code").style.display = "block";
-    document.getElementById("module").style.displsay = "none";
   } else {
-    document.getElementById("play").style.display = "";
     document.getElementById("code").style.display = "none";
     document.getElementById("module").style.display = "none";
+    document.getElementById("play").style.display = "block";
   }
 }
 
@@ -56,6 +61,11 @@ const pageDelimeter = "\n //" + "=".repeat(60) + "\n";
 
 module.innerText = `
   // GenerateForm.js
+ 
+ /**
+    * this module for generating forms can be used in any  javascript ui
+    *
+    * /
 
   ${Input.toString()}
   ${delimter}
@@ -121,7 +131,7 @@ function Input(name, type, value) {
   return `
         <div class="form-col">
             <label for="${name}" type="${type}">${name}</label>
-            <input id="${name}" type="${type}" value="${value}"> 
+            <input id="${name}" type="${type}" value="${value}" required> 
         </div>
     `;
 }
@@ -172,6 +182,7 @@ function Form(title, inputs) {
         <form class="Form">
             <legend>${title}</legend>
             ${inputsHTML}
+            <div class="form-row"><button id="submit-form" type="submit" >Submit</button></div>
         </form>
     `;
 }
@@ -256,7 +267,7 @@ function Render() {
 }
 // ----------------------------------------------------------------
 function addRow() {
-  inputs.push([{ name: "", type: "", value: "" }]);
+  inputs.push([{ name: "input name", type: "text", value: "" }]);
   Render();
 }
 // ----------------------------------------------------------------
@@ -266,7 +277,7 @@ function removeRow(row) {
 }
 // ----------------------------------------------------------------
 function addCol(row) {
-  inputs[row].push({ name: "mario", type: "text", value: "" });
+  inputs[row].push({ name: "inputName", type: "text", value: "" });
   Render();
 }
 // ----------------------------------------------------------------
